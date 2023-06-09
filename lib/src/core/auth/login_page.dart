@@ -116,8 +116,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      MaterialPageRoute(
-                          builder: (context) => const ForgotPassPage());
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ForgotPassPage()));
                     },
                     child: const Text("Forgot Password?"),
                   )
@@ -242,8 +244,10 @@ class _LoginPageState extends State<LoginPage> {
                   const Text("don't have an account?"),
                   TextButton(
                     onPressed: () {
-                      MaterialPageRoute(
-                          builder: (context) => const SignUpPage());
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignUpPage()));
                     },
                     child: const Text("Sign Up"),
                   ),
