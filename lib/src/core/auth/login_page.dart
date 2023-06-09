@@ -189,28 +189,33 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
+                    height: 70,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 10),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius:
-                            const BorderRadius.all(Radius.circular(20)),
+                            const BorderRadius.all(Radius.circular(30)),
                         border: Border.all(
                           color: Colors.grey.shade300,
                           width: 2,
                         )),
                     child: IconButton(
-                        onPressed: () {},
-                        icon: Image.asset("assets/icons/google.png")),
+                      onPressed: () {},
+                      icon: Image.asset(
+                        "assets/icons/google.png",
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 10),
                   Container(
+                    height: 70,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 10),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius:
-                            const BorderRadius.all(Radius.circular(20)),
+                            const BorderRadius.all(Radius.circular(30)),
                         border: Border.all(
                           color: Colors.grey.shade300,
                           width: 2,
@@ -221,12 +226,13 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(width: 10),
                   Container(
+                    height: 70,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 10),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius:
-                            const BorderRadius.all(Radius.circular(20)),
+                            const BorderRadius.all(Radius.circular(30)),
                         border: Border.all(
                           color: Colors.grey.shade300,
                           width: 2,
