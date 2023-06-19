@@ -39,9 +39,9 @@ flutter:
     - family: ArabicCaligraphy
       fonts:
         - asset: assets/fonts/caligraph/aAwalRamadhan.otf
-    - family: Roboto
+    - family: Tajawal
       fonts:
-        - asset: assets/fonts/ui/Roboto-Regular.ttf
+        - asset: assets/fonts/ui/Tajawal-Regular.ttf
   
   
   
