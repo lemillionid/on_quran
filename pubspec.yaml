@@ -18,11 +18,17 @@ dependencies:
   flutter_bloc: ^7.2.0
   hydrated_bloc: ^7.1.0
   animated_text_kit: ^4.2.2
+  flutter_riverpod: ^2.3.6
+  riverpod: ^2.3.6
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  hive_generator: ^2.0.0
+  build_runner: ^2.4.5
 
 flutter:  
   uses-material-design: true
@@ -30,6 +36,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/images/logo.png
     - assets/lotties/
     
   fonts:
@@ -39,9 +46,9 @@ flutter:
     - family: ArabicCaligraphy
       fonts:
         - asset: assets/fonts/caligraph/aAwalRamadhan.otf
-    - family: Roboto
+    - family: Tajawal
       fonts:
-        - asset: assets/fonts/ui/Roboto-Regular.ttf
+        - asset: assets/fonts/ui/Tajawal-Regular.ttf
   
   
   

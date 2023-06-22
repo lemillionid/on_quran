@@ -1,23 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        title: const Image(
-          image: AssetImage("assets/images/text236.png"),
-          height: 40,
-        ),
+          elevation: 0,
+          title: const Text(
+            'onQuran',
+            style: TextStyle(
+              fontFamily: 'ArabicCaligraphy',
+              fontSize: 34,
+            ),
+          )),
+      body: Center(
+        child: ValueListenableBuilder(
+            valueListenable: Hive.box('themedata').listenable(),
+            builder: (context, box, child) {
+              final isDark = box.get('isDark', defaultValue: false);
+              return Switch(
+                value: isDark,
+                onChanged: (value) {
+                  box.put('isDark', value);
+                },
+              );
+            }),
       ),
     );
   }

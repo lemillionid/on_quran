@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:on_quran_uiux/src/core/auth/forgot_pass_page.dart';
-import 'package:on_quran_uiux/src/core/auth/signup_page.dart';
-import 'package:on_quran_uiux/src/screen/home/home_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+import '../../../screen/home/home_screen.dart';
+import '../forgot_pass_page.dart';
+import '../signup_page.dart';
+
+class LoginScreen extends ConsumerStatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  ConsumerState<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginScreenState extends ConsumerState<LoginScreen> {
   bool _passwordVisible = false;
   bool _rememberMe = false;
   bool _isPressed = false;
@@ -24,32 +26,36 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(30),
-        color: Colors.white,
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+      body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                "assets/images/login_illus.png",
-                height: 250,
-                width: 250,
+                "assets/images/lockon.png",
+                height: 100,
               ),
-              const SizedBox(height: 20),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+              const SizedBox(height: 30),
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Assalammu'alaikum",
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontSize: 28,
+                      fontFamily: "ArabicCaligraphy",
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
                   Text(
                     "Login to continue using the app",
                     style: TextStyle(
-                      color: Colors.teal,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Roboto",
+                      fontSize: 16,
+                      fontFamily: "Tajawal",
                     ),
                   ),
                 ],
@@ -57,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.symmetric(
-                  vertical: 10,
+                  vertical: 5,
                   horizontal: 25,
                 ),
                 decoration: BoxDecoration(
@@ -73,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.symmetric(
-                  vertical: 10,
+                  vertical: 5,
                   horizontal: 25,
                 ),
                 decoration: BoxDecoration(
@@ -127,13 +133,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 10),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+                padding: const EdgeInsets.symmetric(vertical: 5),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: _isPressed
                           ? [Colors.blueAccent, Colors.lightGreen]
-                          : [Colors.green, Colors.blue],
+                          : [Colors.lightGreen, Colors.blue],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -186,11 +192,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 20),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 10),
+                    height: 55,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius:
@@ -200,13 +207,17 @@ class _LoginPageState extends State<LoginPage> {
                           width: 2,
                         )),
                     child: IconButton(
-                        onPressed: () {},
-                        icon: Image.asset("assets/icons/google.png")),
+                      onPressed: () {},
+                      icon: Image.asset(
+                        "assets/icons/google.png",
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 10),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 10),
+                    height: 55,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius:
@@ -218,22 +229,6 @@ class _LoginPageState extends State<LoginPage> {
                     child: IconButton(
                         onPressed: () {},
                         icon: Image.asset("assets/icons/facebook.png")),
-                  ),
-                  const SizedBox(width: 10),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 10),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(20)),
-                        border: Border.all(
-                          color: Colors.grey.shade300,
-                          width: 2,
-                        )),
-                    child: IconButton(
-                        onPressed: () {},
-                        icon: Image.asset("assets/icons/apple.png")),
                   ),
                 ],
               ),
