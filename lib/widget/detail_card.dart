@@ -14,7 +14,7 @@ class _DetailCardState extends ConsumerState<DetailCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 230,
+      height: 280,
       width: double.infinity,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -29,7 +29,7 @@ class _DetailCardState extends ConsumerState<DetailCard> {
         image: DecorationImage(
           image: AssetImage(
               'assets/images/aqwam-jembatan-ilmu-jTvT1OiBVNk-unsplash.jpg'),
-          fit: BoxFit.fitWidth,
+          fit: BoxFit.cover,
           opacity: 0.3,
         ),
       ),
@@ -39,7 +39,7 @@ class _DetailCardState extends ConsumerState<DetailCard> {
           vertical: 15.0,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +73,7 @@ class _DetailCardState extends ConsumerState<DetailCard> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             Column(
               children: [
                 Text(
@@ -106,7 +106,7 @@ class _DetailCardState extends ConsumerState<DetailCard> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

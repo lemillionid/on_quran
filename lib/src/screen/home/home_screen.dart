@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:on_quran_uiux/widget/appbar.dart';
+import 'package:on_quran_uiux/widget/ayahotd_card.dart';
 import 'package:on_quran_uiux/widget/detail_card.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -11,18 +12,34 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
+  final double cardHeight = 280;
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    final top = cardHeight - 200 / 3.3;
+
+    return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(20),
-          child: Column(
-            children: [
-              OnQuranAB(),
-              SizedBox(height: 10),
-              DetailCard(),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: [
+                const OnQuranAB(),
+                const SizedBox(height: 10),
+                Stack(
+                  clipBehavior: Clip.none,
+                  alignment: Alignment.center,
+                  children: [
+                    const DetailCard(),
+                    Positioned(
+                      top: top,
+                      child: const AyahOtdCard(),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
