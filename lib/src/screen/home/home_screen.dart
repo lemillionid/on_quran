@@ -4,6 +4,8 @@ import 'package:on_quran_uiux/widget/appbar.dart';
 import 'package:on_quran_uiux/widget/ayahotd_card.dart';
 import 'package:on_quran_uiux/widget/detail_card.dart';
 
+import '../../../widget/features_card.dart';
+
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
@@ -38,6 +40,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     )
                   ],
                 ),
+                const SizedBox(height: 100),
+                const FeaturesCard(),
               ],
             ),
           ),
