@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:on_quran_uiux/src/core/util/constants.dart';
+import 'package:on_quran_uiux/widget/appbar.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -13,27 +14,38 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          elevation: 0,
-          title: const Text(
-            'onQuran',
-            style: TextStyle(
-              fontFamily: 'ArabicCaligraphy',
-              fontSize: 34,
-            ),
-          )),
-      body: Center(
-        child: ValueListenableBuilder(
-            valueListenable: Hive.box('themedata').listenable(),
-            builder: (context, box, child) {
-              final isDark = box.get('isDark', defaultValue: false);
-              return Switch(
-                value: isDark,
-                onChanged: (value) {
-                  box.put('isDark', value);
-                },
-              );
-            }),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              const OnQuranAB(),
+              const SizedBox(height: 10),
+              Container(
+                height: 150,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      primaryColor,
+                      secondaryColor,
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(17)),
+                  image: DecorationImage(
+                    image: AssetImage(
+                        'assets/images/masjid-pogung-dalangan-pEHjWZFhyN8-unsplash.jpg'),
+                    fit: BoxFit.cover,
+                    alignment: Alignment.center,
+                    opacity: 0.3,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

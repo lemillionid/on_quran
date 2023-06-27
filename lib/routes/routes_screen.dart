@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:on_quran_uiux/src/core/auth/login/login_page.dart';
-import 'package:on_quran_uiux/src/core/auth/signup_page.dart';
+import 'package:on_quran_uiux/src/core/auth/signup/signup_page.dart';
 import 'package:on_quran_uiux/src/core/error/exceptions.dart';
 import 'package:on_quran_uiux/src/screen/home/home_screen.dart';
 import 'package:on_quran_uiux/src/screen/onboarding/onboarding_screen.dart';

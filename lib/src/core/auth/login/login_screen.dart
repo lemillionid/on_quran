@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../screen/home/home_screen.dart';
+import 'package:on_quran_uiux/src/screen/tabscreen/tab_screen.dart';
 import '../forgot_pass_page.dart';
-import '../signup_page.dart';
+import '../signup/signup_page.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
@@ -32,20 +31,54 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                "assets/images/lockon.png",
-                height: 100,
-              ),
-              const SizedBox(height: 30),
+              Container(
+                  height: 100,
+                  width: 400,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(17)),
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.deepPurple,
+                          Colors.blue,
+                        ],
+                      ),
+                      image: DecorationImage(
+                        image: AssetImage(
+                            'assets/images/haidan-Qec3HPaHWTI-unsplash.jpg'),
+                        fit: BoxFit.cover,
+                        alignment: Alignment.center,
+                        opacity: 0.4,
+                      )),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Login Page',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(width: 25),
+                      Image(
+                        image: AssetImage('assets/icons/lockon.png'),
+                        height: 80,
+                        width: 80,
+                      )
+                    ],
+                  )),
+              const SizedBox(height: 20),
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Assalammu'alaikum",
+                    "السلام عليكم",
                     style: TextStyle(
-                      color: Colors.teal,
-                      fontSize: 28,
-                      fontFamily: "ArabicCaligraphy",
+                      color: Colors.deepPurple,
+                      fontFamily: 'QuranFont',
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
@@ -138,8 +171,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: _isPressed
-                          ? [Colors.blueAccent, Colors.lightGreen]
-                          : [Colors.lightGreen, Colors.blue],
+                          ? [Colors.blueAccent, Colors.purple]
+                          : [Colors.purple, Colors.blue],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -150,7 +183,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomeScreen()));
+                            builder: (context) => const TabScreen()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.transparent,
