@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hijriyah_indonesia/hijriyah_indonesia.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
 
 import '../src/core/util/constants.dart';
 
@@ -11,6 +14,14 @@ class DetailCard extends ConsumerStatefulWidget {
 }
 
 class _DetailCardState extends ConsumerState<DetailCard> {
+  DateTime now = DateTime.now();
+
+  @override
+  void initState() {
+    initializeDateFormatting();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,8 +44,8 @@ class _DetailCardState extends ConsumerState<DetailCard> {
           opacity: 0.3,
         ),
       ),
-      child: const Padding(
-        padding: EdgeInsets.symmetric(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
           horizontal: 15.0,
           vertical: 15.0,
         ),
@@ -48,8 +59,8 @@ class _DetailCardState extends ConsumerState<DetailCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Selasa, 27 Juni 2023',
-                      style: TextStyle(
+                      DateFormat('EEEE, d MMMM yyyy', 'id_ID').format(now),
+                      style: const TextStyle(
                         color: Colors.white,
                         fontFamily: 'Tajawal',
                         fontWeight: FontWeight.w800,
@@ -57,8 +68,8 @@ class _DetailCardState extends ConsumerState<DetailCard> {
                       ),
                     ),
                     Text(
-                      '8 Dzulhijjah 1444H',
-                      style: TextStyle(
+                      Hijriyah.now().toFormat('d MMMM yyyy'),
+                      style: const TextStyle(
                         color: Colors.white,
                         fontFamily: 'Tajawal',
                         fontWeight: FontWeight.w500,
@@ -66,15 +77,15 @@ class _DetailCardState extends ConsumerState<DetailCard> {
                     ),
                   ],
                 ),
-                Icon(
+                const Icon(
                   Icons.notification_important_rounded,
                   color: Colors.white,
                   size: 32,
                 ),
               ],
             ),
-            SizedBox(height: 15),
-            Column(
+            const SizedBox(height: 15),
+            const Column(
               children: [
                 Text(
                   'Maghrib',
@@ -106,8 +117,8 @@ class _DetailCardState extends ConsumerState<DetailCard> {
                 ),
               ],
             ),
-            SizedBox(height: 10),
-            Row(
+            const SizedBox(height: 10),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
