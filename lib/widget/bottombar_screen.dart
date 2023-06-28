@@ -63,7 +63,7 @@ class _BottomBarMenuState extends State<BottomBarMenu> {
               currentIndex: _selectedPageIndex,
               items: const [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home_rounded),
+                  icon: Icon(Icons.window_rounded),
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
