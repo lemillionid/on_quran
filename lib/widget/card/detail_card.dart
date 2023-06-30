@@ -4,7 +4,7 @@ import 'package:hijriyah_indonesia/hijriyah_indonesia.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 
-import '../src/core/util/constants.dart';
+import '../../src/core/util/constants.dart';
 
 class DetailCard extends ConsumerStatefulWidget {
   const DetailCard({super.key});
