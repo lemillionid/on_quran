@@ -57,7 +57,7 @@ class _BottomBarMenuState extends State<BottomBarMenu> {
             child: BottomNavigationBar(
               onTap: _selectPage,
               backgroundColor: Theme.of(context).primaryColor,
-              unselectedItemColor: Colors.grey,
+              unselectedItemColor: Colors.blue.shade200,
               selectedItemColor: Colors.purple,
               elevation: 0,
               currentIndex: _selectedPageIndex,

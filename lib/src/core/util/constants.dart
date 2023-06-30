@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //padding
-const double kPaddingOnQuran = 25;
+const kPaddingOnQuran = EdgeInsets.all(20);
 
 //warna theme
 const Color kGColorText = Color.fromARGB(255, 103, 58, 183);

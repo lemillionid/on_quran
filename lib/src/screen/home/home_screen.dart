@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:on_quran_uiux/src/core/util/constants.dart';
 import 'package:on_quran_uiux/widget/appbar.dart';
 import 'package:on_quran_uiux/widget/ayahotd_card.dart';
 import 'package:on_quran_uiux/widget/detail_card.dart';
@@ -24,7 +25,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: kPaddingOnQuran,
             child: Column(
               children: [
                 const OnQuranAB(),
