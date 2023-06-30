@@ -22,6 +22,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final top = cardHeight - 200 / 3.3;
 
     return Scaffold(
+      extendBody: true,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

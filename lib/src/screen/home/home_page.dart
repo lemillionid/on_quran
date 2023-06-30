@@ -13,8 +13,8 @@ class _HomePageState extends ConsumerState<HomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      extendBody: true,
       body: HomeScreen(),
-      bottomNavigationBar: BottomAppBar(),
     );
   }
 }

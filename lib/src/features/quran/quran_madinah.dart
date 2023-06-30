@@ -1,6 +1,7 @@
+// import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:on_quran_uiux/src/features/quran/quran_page.dart';
 
+import '../../../widget/navbar/bottom_navbar.dart';
 import '../../core/util/constants.dart';
 
 class MenuQuran extends StatelessWidget {
@@ -8,10 +9,15 @@ class MenuQuran extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final navigationKey = GlobalKey<CurvedNavigationBarState>();
+
     return GestureDetector(
       onTap: () {
         Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const QuranPage()));
+            MaterialPageRoute(builder: (context) => const CurvedBotNavbar()));
+        // final navigationState = navigationKey.currentState;
+
+        // navigationState?.setPage(2);
       },
       child: InkWell(
         highlightColor: Colors.grey.withOpacity(0.4),

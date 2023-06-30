@@ -22,10 +22,10 @@ dependencies:
   riverpod: ^2.3.6
   hive: ^2.2.3
   hive_flutter: ^1.1.0
-  onboarding: ^3.1.0
   badges: ^3.1.1
   intl: ^0.18.1
   hijriyah_indonesia: ^0.1.2
+  curved_navigation_bar: ^1.0.3
   
 dev_dependencies:
   flutter_test:
@@ -40,7 +40,6 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
-    - assets/images/logo.png
     - assets/lotties/
     
   fonts:
