@@ -22,7 +22,12 @@ dependencies:
   riverpod: ^2.3.6
   hive: ^2.2.3
   hive_flutter: ^1.1.0
-
+  onboarding: ^3.1.0
+  badges: ^3.1.1
+  intl: ^0.18.1
+  hijriyah_indonesia: ^0.1.2
+  curved_navigation_bar: ^1.0.3
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -43,12 +48,15 @@ flutter:
     - family: QuranFont
       fonts:
         - asset: assets/fonts/arabic/KFGQPC-Uthmanic-Script-HAFS-Regular.otf
-    - family: ArabicCaligraphy
+    - family: OnQuran
       fonts:
         - asset: assets/fonts/caligraph/aAwalRamadhan.otf
     - family: Tajawal
       fonts:
         - asset: assets/fonts/ui/Tajawal-Regular.ttf
+    # - family: Caprasimo
+    #   fonts:
+    #     - asset: assets/fonts/ui/Caprasimo-Regular.ttf
   
   
   

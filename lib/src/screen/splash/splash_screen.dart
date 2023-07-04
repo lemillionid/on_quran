@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:on_quran_uiux/routes/routes_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 10), () {
-      Navigator.pushReplacementNamed(context, RouteGenerator.signIn);
+      Navigator.pushReplacementNamed(context, RouteGenerator.onBoarding);
     });
   }
 
@@ -26,25 +25,13 @@ class _SplashScreenState extends State<SplashScreen> {
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextLiquidFill(
-                text: "onQuran",
-                waveColor: Colors.blueAccent,
-                boxBackgroundColor: Colors.white,
-                textStyle: const TextStyle(
-                  color: Colors.white,
-                  fontFamily: "ArabicCaligraphy",
-                  fontSize: 78,
-                ),
-                boxHeight: 120,
-                loadDuration: const Duration(seconds: 10),
-              ),
-            ],
+        child: const Center(
+            child: SizedBox(
+          height: 80,
+          child: Image(
+            image: AssetImage('assets/images/logo.png'),
           ),
-        ),
+        )),
       ),
     );
   }
