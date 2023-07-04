@@ -2,7 +2,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:on_quran_uiux/routes/routes_screen.dart';
-import 'package:on_quran_uiux/src/core/util/constants.dart';
 import 'package:on_quran_uiux/widget/navbar/bottom_navbar_items.dart';
 
 class CurvedBotNavbar extends ConsumerStatefulWidget {
@@ -26,11 +25,7 @@ class _CurvedBotNavbarState extends ConsumerState<CurvedBotNavbar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [primaryColor, secondaryColor],
-              begin: Alignment.centerLeft,
-              end: Alignment.bottomRight)),
+      color: Colors.blue.shade700,
       child: SafeArea(
         top: false,
         child: ClipRRect(
@@ -39,8 +34,8 @@ class _CurvedBotNavbarState extends ConsumerState<CurvedBotNavbar> {
             bottomNavigationBar: CurvedNavigationBar(
               key: navigationKey,
               buttonBackgroundColor: Colors.blue.shade700,
-              backgroundColor: Colors.transparent,
-              color: Colors.transparent,
+              backgroundColor: Colors.white,
+              color: Colors.blue.shade700,
               animationCurve: Curves.easeInOut,
               animationDuration: const Duration(milliseconds: 300),
               height: 50,
