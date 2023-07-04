@@ -20,11 +20,7 @@ class _FeaturesCardState extends ConsumerState<FeaturesCard> {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(10),
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(17),
-        ),
-      ),
+      color: Colors.transparent,
       child: const Column(
         children: [
           Row(
@@ -32,7 +28,6 @@ class _FeaturesCardState extends ConsumerState<FeaturesCard> {
               Text(
                 'Our Features',
                 style: TextStyle(
-                  color: Colors.black87,
                   fontFamily: 'Tajawal',
                   fontWeight: FontWeight.bold,
                   fontSize: 18,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:on_quran_uiux/widget/bottombar_screen.dart';
+import 'package:on_quran_uiux/widget/navbar/bottom_navbar.dart';
 
 class TabScreen extends ConsumerStatefulWidget {
   const TabScreen({super.key});
@@ -13,7 +13,7 @@ class _TabScreenState extends ConsumerState<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: BottomBarMenu(),
+      body: CurvedBotNavbar(),
     );
   }
 }
