@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:on_quran_uiux/widget/navbar/bottom_navbar_items.dart';
 
+import '../../routes/routes_screen.dart';
+
 class CurvedBotNavbar extends ConsumerStatefulWidget {
   const CurvedBotNavbar({super.key});
 

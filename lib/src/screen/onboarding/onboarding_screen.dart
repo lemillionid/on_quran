@@ -57,7 +57,7 @@ class _OnBoardingState extends State<OnBoarding> {
                             .headlineLarge!
                             .copyWith(
                                 color: Colors.white,
-                                fontFamily: 'ArabicCaligraphy',
+                                fontFamily: 'OnQuran',
                                 fontSize: 72),
                       ),
                     ],

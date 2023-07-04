@@ -26,6 +26,7 @@ dependencies:
   badges: ^3.1.1
   intl: ^0.18.1
   hijriyah_indonesia: ^0.1.2
+  curved_navigation_bar: ^1.0.3
   
 dev_dependencies:
   flutter_test:
@@ -53,9 +54,9 @@ flutter:
     - family: Tajawal
       fonts:
         - asset: assets/fonts/ui/Tajawal-Regular.ttf
-    - family: Caprasimo
-      fonts:
-        - asset: assets/fonts/ui/Caprasimo-Regular.ttf
+    # - family: Caprasimo
+    #   fonts:
+    #     - asset: assets/fonts/ui/Caprasimo-Regular.ttf
   
   
   

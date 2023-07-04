@@ -9,12 +9,4 @@ const Color kGColorText2 = Color.fromARGB(255, 0, 169, 255);
 const Color kAmber = Color.fromARGB(255, 255, 204, 0);
 const Color primaryColor = Color.fromARGB(255, 156, 39, 176);
 const Color secondaryColor = Color.fromARGB(255, 33, 150, 243);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 const Color unselectedButtonColor = Color.fromARGB(255, 75, 172, 251);
-=======
-const Color unselectedButtonColor = Color.fromARGB(255, 33, 150, 243);
->>>>>>> Stashed changes
-=======
-const Color unselectedButtonColor = Color.fromARGB(255, 33, 150, 243);
->>>>>>> Stashed changes
