@@ -1,27 +1,47 @@
 import 'package:flutter/material.dart';
 
-class OnQuranAB extends StatelessWidget {
+class OnQuranAB extends StatefulWidget {
   const OnQuranAB({super.key});
 
   @override
+  State<OnQuranAB> createState() => _OnQuranABState();
+}
+
+class _OnQuranABState extends State<OnQuranAB> {
+  @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.menu),
-          iconSize: 30,
-        ),
         const Text(
-          'Home',
-          style: TextStyle(fontSize: 16),
+          'onQuran',
+          style: TextStyle(
+            fontSize: 32,
+            fontFamily: 'OnQuran',
+            color: Colors.purple,
+          ),
         ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.person),
-          iconSize: 30,
-        ),
+        const SizedBox(width: 10),
+        Container(
+          width: 60,
+          height: 25,
+          padding: const EdgeInsets.all(5),
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(20),
+            ),
+            color: Colors.blueAccent.shade700,
+          ),
+          child: const Text(
+            'BETA',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        )
       ],
     );
   }
