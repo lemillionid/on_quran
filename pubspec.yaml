@@ -47,12 +47,15 @@ flutter:
     - family: QuranFont
       fonts:
         - asset: assets/fonts/arabic/KFGQPC-Uthmanic-Script-HAFS-Regular.otf
-    - family: ArabicCaligraphy
+    - family: OnQuran
       fonts:
         - asset: assets/fonts/caligraph/aAwalRamadhan.otf
     - family: Tajawal
       fonts:
         - asset: assets/fonts/ui/Tajawal-Regular.ttf
+    - family: Caprasimo
+      fonts:
+        - asset: assets/fonts/ui/Caprasimo-Regular.ttf
   
   
   
