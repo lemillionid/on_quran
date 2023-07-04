@@ -63,7 +63,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       const SizedBox(height: 10),
                       Container(
                         padding: const EdgeInsets.all(15),
-                        height: 180,
+                        height: 250,
                         width: double.infinity,
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
@@ -76,6 +76,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           ),
                           borderRadius: BorderRadius.all(
                             Radius.circular(17),
+                          ),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                                'https://lh3.googleusercontent.com/p/AF1QipMDnfwoVDEJTm4wZ3tQ9YpbKEfJv8beJoRGYWvX=s1360-w1360-h1020'),
+                            fit: BoxFit.cover,
+                            opacity: 0.3,
                           ),
                         ),
                         child: Column(
@@ -99,6 +105,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               ),
                             ),
                             const Text(
+                              'SUNNAH',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            const Text(
                               'Wujudkan terciptanya Generasi Qur\'ani',
                               style: TextStyle(
                                 color: Colors.white,
@@ -112,11 +127,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 fontSize: 14,
                               ),
                             ),
-                            const SizedBox(height: 10),
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: const ButtonStyle(),
-                              child: const Text('Donasi'),
+                            const SizedBox(height: 30),
+                            SizedBox(
+                              width: double.infinity,
+                              height: 45,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  foregroundColor: Colors.blue.shade700,
+                                  backgroundColor: Colors.white,
+                                ),
+                                child: const Text(
+                                  'DONASI SEKARANG',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),

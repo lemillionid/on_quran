@@ -41,7 +41,7 @@ class _DetailCardState extends ConsumerState<DetailCard> {
           image: AssetImage(
               'assets/images/aqwam-jembatan-ilmu-jTvT1OiBVNk-unsplash.jpg'),
           fit: BoxFit.cover,
-          opacity: 0.3,
+          opacity: 0.2,
         ),
       ),
       child: Padding(
