@@ -16,8 +16,7 @@ class UserProfile extends ConsumerWidget {
             maxRadius: 40.0,
             backgroundColor: Colors.blueGrey,
             foregroundColor: Colors.white,
-            backgroundImage: NetworkImage(
-                'https://scontent.fplm4-1.fna.fbcdn.net/v/t39.30808-6/324578337_541403194681325_1616581128881804731_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFvH5UsPmfVQ3s5OfspNAL-6L-L13ylJdjov4vXfKUl2P8Dxd9NP6e650jWou6jcuxN1Bh_OvpUbAyzTkgH0j8y&_nc_ohc=JvR6FzFT6Q0AX_Plmkx&_nc_ht=scontent.fplm4-1.fna&oh=00_AfC-1wnfR6SJYVovcX3AP6nPDVqT6OKjDCxf6UbCqmatHA&oe=64AC5208'),
+            backgroundImage: AssetImage('assets/images/user.jpg'),
           ),
           const SizedBox(width: 15),
           Column(
@@ -49,7 +48,7 @@ class UserProfile extends ConsumerWidget {
                     borderRadius: const BorderRadius.all(
                       Radius.circular(17),
                     ),
-                    color: Colors.amber.shade600),
+                    color: Colors.amber.shade900),
                 child: const Text(
                   'PELAJAR',
                   style: TextStyle(

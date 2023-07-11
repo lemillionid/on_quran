@@ -5,6 +5,7 @@ import 'package:on_quran_uiux/src/core/error/exceptions.dart';
 import 'package:on_quran_uiux/src/screen/home/home_screen.dart';
 import 'package:on_quran_uiux/src/screen/onboarding/onboarding_screen.dart';
 import 'package:on_quran_uiux/src/screen/splash/splash_screen.dart';
+import 'package:on_quran_uiux/src/screen/tabscreen/tab_screen.dart';
 
 import '../src/features/ngaji/ngaji_page.dart';
 import '../src/features/qiblah/qiblah_page.dart';
@@ -18,6 +19,7 @@ class RouteGenerator {
   static const String home = "/home";
   static const String signIn = "/signin";
   static const String signUp = "/signup";
+  static const String tabScreen = "/tabscreen";
 
   RouteGenerator._();
 
@@ -33,6 +35,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const LoginPage());
       case signUp:
         return MaterialPageRoute(builder: (_) => const SignUpPage());
+      case tabScreen:
+        return MaterialPageRoute(builder: (_) => const TabScreen());
       default:
         throw RouteException("Route not found");
     }
@@ -46,5 +50,6 @@ class NavigationPages {
     {'page': const QuranPage()},
     {'page': const NgajiPage()},
     {'page': const SettingsPage()},
+    {'page': const TabScreen()},
   ];
 }

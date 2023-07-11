@@ -94,7 +94,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     onPressed: () {
                       Navigator.pushReplacementNamed(
                         context,
-                        RouteGenerator.signIn,
+                        RouteGenerator.tabScreen,
                       );
                     },
                     label: const Text(
