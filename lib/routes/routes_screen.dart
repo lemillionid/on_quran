@@ -50,6 +50,5 @@ class NavigationPages {
     {'page': const QuranPage()},
     {'page': const NgajiPage()},
     {'page': const SettingsPage()},
-    {'page': const TabScreen()},
   ];
 }

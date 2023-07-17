@@ -92,15 +92,13 @@ class _AyahOtdCardState extends ConsumerState<AyahOtdCard> {
                       ),
                     ),
                     Container(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                        child: InkWell(
-                          onTap: () {},
-                          child: const Icon(
-                            Icons.share_outlined,
-                            size: 25,
-                            color: Colors.blue,
-                          ),
+                      padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                      child: InkWell(
+                        onTap: () {},
+                        child: const Icon(
+                          Icons.share_outlined,
+                          size: 25,
+                          color: Colors.blue,
                         ),
                       ),
                     ),

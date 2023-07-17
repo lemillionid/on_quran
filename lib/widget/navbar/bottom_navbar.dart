@@ -31,7 +31,15 @@ class _CurvedBotNavbarState extends ConsumerState<CurvedBotNavbar> {
         top: false,
         child: ClipRRect(
           child: Scaffold(
-            body: NavigationPages.pages[_setIndex]['page'],
+            body: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: child,
+                  );
+                },
+                child: NavigationPages.pages[_setIndex]['page']),
             bottomNavigationBar: CurvedNavigationBar(
               key: navigationKey,
               buttonBackgroundColor: Colors.deepPurpleAccent,

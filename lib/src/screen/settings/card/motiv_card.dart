@@ -91,6 +91,29 @@ class _MotivationCardUserState extends ConsumerState<MotivationCardUser> {
             ),
           ),
         ),
+        Positioned(
+          top: 0,
+          right: 2,
+          child: Container(
+            width: 25,
+            height: 25,
+            decoration: const BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(17),
+                bottomLeft: Radius.circular(17),
+              ),
+            ),
+            alignment: Alignment.center,
+            child: InkWell(
+              onTap: () {},
+              child: const Icon(
+                Icons.edit_note_rounded,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        )
       ],
     );
   }
