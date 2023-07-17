@@ -124,6 +124,7 @@ class _AyahOtdCardState extends ConsumerState<AyahOtdCard> {
                     style: TextStyle(
                       fontFamily: 'QuranFont',
                       fontSize: 20,
+                      color: Colors.black87,
                     ),
                   ),
                   Text(
@@ -131,6 +132,7 @@ class _AyahOtdCardState extends ConsumerState<AyahOtdCard> {
                     textAlign: TextAlign.right,
                     style: TextStyle(
                       fontFamily: 'Tajawal',
+                      color: Colors.black87,
                     ),
                   )
                 ],
