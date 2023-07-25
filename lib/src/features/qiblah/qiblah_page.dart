@@ -13,15 +13,28 @@ class QiblahPage extends ConsumerStatefulWidget {
 
 class _QiblahPageState extends ConsumerState<QiblahPage> {
   bool hasPermission = false;
+  final hasPermissionProvider = StateProvider<bool>((ref) {
+    return false;
+  });
+
+  @override
+  void initState() {
+    super.initState();
+    getPermission();
+  }
 
   Future getPermission() async {
     if (await Permission.location.serviceStatus.isEnabled) {
       var status = await Permission.location.status;
       if (status.isGranted) {
-        hasPermission = true;
+        setState(() {
+          hasPermission = true;
+        });
       } else {
         Permission.location.request().then((value) {
-          hasPermission = (value == PermissionStatus.granted);
+          setState(() {
+            hasPermission = (value == PermissionStatus.granted);
+          });
         });
       }
     }
