@@ -10,3 +10,5 @@ const Color kAmber = Color.fromARGB(255, 255, 204, 0);
 const Color primaryColor = Color.fromARGB(255, 156, 39, 176);
 const Color secondaryColor = Color.fromARGB(255, 25, 118, 210);
 const Color unselectedButtonColor = Color.fromARGB(255, 75, 172, 251);
+const Color scaffoldBGC = Color(0xFF000717);
+const Color textTheme = Color.fromARGB(255, 255, 255, 255);

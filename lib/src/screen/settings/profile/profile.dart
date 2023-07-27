@@ -13,7 +13,7 @@ class UserProfile extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const CircleAvatar(
-            maxRadius: 40.0,
+            maxRadius: 30.0,
             backgroundColor: Colors.blueGrey,
             foregroundColor: Colors.white,
             backgroundImage: AssetImage('assets/images/user.jpg'),
@@ -22,24 +22,27 @@ class UserProfile extends ConsumerWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Badge(
-                badgeContent:
-                    const Icon(Icons.check, color: Colors.white, size: 8),
-                badgeStyle: BadgeStyle(
-                    shape: BadgeShape.instagram,
-                    badgeColor: Colors.blueAccent.shade700),
-                position: BadgePosition.custom(start: 120),
-                child: const Text(
-                  'Abdurrahman',
-                  style: TextStyle(
-                    color: Colors.deepPurple,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w900,
-                    fontFamily: 'Tajawal',
+              Row(
+                children: [
+                  const Text(
+                    'Abdurrahman',
+                    style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      fontFamily: 'Tajawal',
+                    ),
                   ),
-                ),
+                  const SizedBox(width: 5),
+                  Badge(
+                    badgeContent:
+                        const Icon(Icons.check, color: Colors.white, size: 8),
+                    badgeStyle: BadgeStyle(
+                        shape: BadgeShape.instagram,
+                        badgeColor: Colors.blueAccent.shade700),
+                  )
+                ],
               ),
-              const SizedBox(height: 5),
               Container(
                 padding: const EdgeInsets.all(5),
                 width: 100,
@@ -81,7 +84,7 @@ class UserProfile extends ConsumerWidget {
             child: InkWell(
               onTap: () {},
               child: const Icon(
-                Icons.mode_edit_outline_rounded,
+                Icons.edit_rounded,
                 color: Colors.grey,
               ),
             ),

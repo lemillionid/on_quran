@@ -25,7 +25,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Padding(
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/starbg.png'),
+                fit: BoxFit.cover,
+                opacity: 0.5,
+              ),
+            ),
             padding: kPaddingOnQuran,
             child: Column(
               children: [
@@ -44,6 +51,57 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
                 const SizedBox(height: 100),
                 const FeaturesCard(),
+                const SizedBox(height: 10),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            'Kajian Trending',
+                            style: TextStyle(
+                              fontFamily: 'Tajawal',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 200,
+                              width: 200,
+                              padding: const EdgeInsets.all(10),
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(17),
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    spreadRadius: 0.1,
+                                    blurRadius: 8,
+                                    offset: Offset(0, 1),
+                                  ),
+                                ],
+                                color: Colors.white,
+                              ),
+                              child: const Column(
+                                children: [],
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
                 const SizedBox(height: 10),
                 const CtaDonasi(),
               ],

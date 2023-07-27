@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:on_quran_uiux/src/core/util/constants.dart';
-import 'package:on_quran_uiux/widget/appbar.dart';
 
 class QuranScreen extends ConsumerStatefulWidget {
   const QuranScreen({super.key});
@@ -20,7 +19,6 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
             padding: kPaddingOnQuran,
             child: Column(
               children: [
-                OnQuranAB(),
                 Text('Quran Page'),
               ],
             ),
