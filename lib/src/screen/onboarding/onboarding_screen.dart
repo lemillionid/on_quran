@@ -43,7 +43,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     alignment: Alignment.bottomLeft,
                     children: [
                       Text(
-                        'v.1.0.0',
+                        'BETA',
                         style:
                             Theme.of(context).textTheme.headlineSmall!.copyWith(
                                   color: Colors.white,
