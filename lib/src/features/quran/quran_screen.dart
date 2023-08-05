@@ -25,6 +25,46 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
                     'Quran Test',
                     textAlign: TextAlign.start,
                   ),
+                  // const SizedBox(height: 10),
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     border: Border.all(
+                  //       color: Colors.grey,
+                  //       width: 1,
+                  //     ),
+                  //   ),
+                  //   width: 250,
+                  //   padding: const EdgeInsets.all(10),
+                  //   child: const Directionality(
+                  //     textDirection: TextDirection.rtl,
+                  //     child: Column(
+                  //       crossAxisAlignment: CrossAxisAlignment.stretch,
+                  //       children: [
+                  //         Text(
+                  //           ' إِنَّٱلَّذِينَ كَفَرُواْسَوَآءٌعَلَيۡهِمۡءَأَنذَرۡتَهُمۡ أَمۡ لَمۡ تُنذِرۡهُمۡ ',
+                  //           style: TextStyle(
+                  //             fontFamily: 'QuranFont',
+                  //           ),
+                  //           textAlign: TextAlign.justify,
+                  //         ),
+                  //         Text(
+                  //           'لَايُؤۡمِنُونَ ٦ خَتَمَ ٱللَّهُ عَلَىٰ قُلُوبِهِمۡ وَعَلَىٰ سَمۡعِهِمۡۖ وَعَلَىٰٓ',
+                  //           style: TextStyle(
+                  //             fontFamily: 'QuranFont',
+                  //           ),
+                  //           textAlign: TextAlign.justify,
+                  //         ),
+                  //         Text(
+                  //           'أَبۡصَٰرِهِمۡ  غِشَٰوَةٞۖ وَلَهُمۡ عَذَابٌ عَظِيمٞ ٧ وَمِنَ ٱلنَّاسِ',
+                  //           style: TextStyle(
+                  //             fontFamily: 'QuranFont',
+                  //           ),
+                  //           textAlign: TextAlign.justify,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                   const SizedBox(height: 10),
                   Container(
                     decoration: BoxDecoration(
@@ -33,47 +73,7 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
                         width: 1,
                       ),
                     ),
-                    width: 250,
-                    padding: const EdgeInsets.all(10),
-                    child: const Directionality(
-                      textDirection: TextDirection.rtl,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Text(
-                            ' إِنَّٱلَّذِينَ كَفَرُواْسَوَآءٌعَلَيۡهِمۡءَأَنذَرۡتَهُمۡ أَمۡ لَمۡ تُنذِرۡهُمۡ ',
-                            style: TextStyle(
-                              fontFamily: 'QuranFont',
-                            ),
-                            textAlign: TextAlign.justify,
-                          ),
-                          Text(
-                            'لَايُؤۡمِنُونَ ٦ خَتَمَ ٱللَّهُ عَلَىٰ قُلُوبِهِمۡ وَعَلَىٰ سَمۡعِهِمۡۖ وَعَلَىٰٓ',
-                            style: TextStyle(
-                              fontFamily: 'QuranFont',
-                            ),
-                            textAlign: TextAlign.justify,
-                          ),
-                          Text(
-                            'أَبۡصَٰرِهِمۡ  غِشَٰوَةٞۖ وَلَهُمۡ عَذَابٌ عَظِيمٞ ٧ وَمِنَ ٱلنَّاسِ',
-                            style: TextStyle(
-                              fontFamily: 'QuranFont',
-                            ),
-                            textAlign: TextAlign.justify,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.grey,
-                        width: 1,
-                      ),
-                    ),
-                    width: 250,
+                    width: 350,
                     padding: const EdgeInsets.all(10),
                     child: Directionality(
                       textDirection: TextDirection.rtl,
@@ -84,9 +84,10 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
                           children: const <TextSpan>[
                             TextSpan(
                               text:
-                                  'إِنَّٱلَّذِينَ كَفَرُواْسَوَآءٌعَلَيۡهِمۡءَأَنذَرۡتَهُمۡ أَمۡ لَمۡ تُنـذِرۡهُمۡ ',
+                                  'إِنَّ ٱلَّذِينَ كَفَرُواْسَوَآءٌعَلَيۡهِمۡءَأَنذَرۡتَهُمۡ أَمۡ لَمۡ تُنـذِرۡهُمۡ ',
                               style: TextStyle(
                                 fontFamily: 'QuranFont',
+                                fontSize: 20,
                               ),
                             ),
                             TextSpan(
@@ -94,6 +95,7 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
                                   'لَايُؤۡمِنُونَ ٦ خَتَمَ ٱللَّهُ عَلَىٰ قُلُوبِهِمۡ وَعَلَىٰ سَمۡعِهِمۡۖ وَعَلَىٰٓ',
                               style: TextStyle(
                                 fontFamily: 'QuranFont',
+                                fontSize: 20,
                               ),
                             ),
                             TextSpan(
@@ -101,6 +103,7 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
                                   ' أَبۡصَٰرِهِمۡ  غِشَٰوَةٞۖ وَلَهُمۡ عَذَابٌ عَظِيمٞ  ٧ وَمِنَ ٱلنَّاسِ',
                               style: TextStyle(
                                 fontFamily: 'QuranFont',
+                                fontSize: 20,
                               ),
                             ),
                             TextSpan(
@@ -108,8 +111,9 @@ class _QuranScreenState extends ConsumerState<QuranScreen> {
                                   ' مَن يَقُولُ ءَامَنَّا بِٱللَّهِ وَبِٱلۡيَوۡمِ ٱلۡأٓخِرِ وَمَاهُم بِمُؤۡمِنِينَ ٨',
                               style: TextStyle(
                                 fontFamily: 'QuranFont',
+                                fontSize: 20,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
