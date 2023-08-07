@@ -47,6 +47,9 @@ flutter:
     - family: QuranFont
       fonts:
         - asset: assets/fonts/arabic/KFGQPC-Uthmanic-Script-HAFS-Regular.otf
+    - family: QuranFont2
+      fonts:
+        - asset: assets/fonts/arabic/uthmanic_hafs_v20.ttf
     - family: OnQuran
       fonts:
         - asset: assets/fonts/caligraph/aAwalRamadhan.otf
