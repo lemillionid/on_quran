@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:on_quran_uiux/src/core/util/constants.dart';
 
 class OnQuranAB extends StatefulWidget {
   const OnQuranAB({super.key});
@@ -18,7 +19,7 @@ class _OnQuranABState extends State<OnQuranAB> {
           style: TextStyle(
             fontSize: 32,
             fontFamily: 'OnQuran',
-            color: Colors.purple,
+            color: primaryColor,
           ),
         ),
         const SizedBox(width: 10),

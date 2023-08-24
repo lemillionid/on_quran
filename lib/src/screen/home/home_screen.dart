@@ -4,6 +4,7 @@ import 'package:on_quran_uiux/src/core/util/constants.dart';
 import 'package:on_quran_uiux/widget/appbar.dart';
 import 'package:on_quran_uiux/widget/ayahotd_card.dart';
 import 'package:on_quran_uiux/widget/calltoaction/cta_donasi.dart';
+import 'package:on_quran_uiux/widget/card/kajian_card.dart';
 import 'package:on_quran_uiux/widget/detail_card.dart';
 
 import '../../../widget/features_card.dart';
@@ -52,56 +53,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 const SizedBox(height: 100),
                 const FeaturesCard(),
                 const SizedBox(height: 10),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
-                    children: [
-                      const Row(
-                        children: [
-                          Text(
-                            'Kajian Trending',
-                            style: TextStyle(
-                              fontFamily: 'Tajawal',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 10),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 200,
-                              width: 200,
-                              padding: const EdgeInsets.all(10),
-                              decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(17),
-                                ),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black12,
-                                    spreadRadius: 0.1,
-                                    blurRadius: 8,
-                                    offset: Offset(0, 1),
-                                  ),
-                                ],
-                                color: Colors.white,
-                              ),
-                              child: const Column(
-                                children: [],
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+                const KajianCard(),
                 const SizedBox(height: 10),
                 const CtaDonasi(),
               ],
