@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/util/constants.dart';
+import 'modal_quran.dart';
 
 class MenuQuran extends StatefulWidget {
   const MenuQuran({super.key});
@@ -14,21 +15,18 @@ class _MenuQuranState extends State<MenuQuran> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        showBottomSheet(
-            context: context,
-            builder: (BuildContext context) {
-              return SizedBox(
-                height: 400,
-                child: Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text('Close'),
-                  ),
-                ),
-              );
-            });
+        showModalBottomSheet(
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight: Radius.circular(20),
+            ),
+          ),
+          context: context,
+          builder: (BuildContext context) {
+            return const ModalQuran();
+          },
+        );
       },
       child: InkWell(
         highlightColor: Colors.grey.withOpacity(0.4),
@@ -70,7 +68,7 @@ class _MenuQuranState extends State<MenuQuran> {
                     ),
                   ),
                   Text(
-                    'Mushaf View',
+                    'Read Quran',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 12,
