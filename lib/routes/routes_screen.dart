@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:on_quran_uiux/src/core/auth/login/login_page.dart';
 import 'package:on_quran_uiux/src/core/auth/signup/signup_page.dart';
 import 'package:on_quran_uiux/src/core/error/exceptions.dart';
+import 'package:on_quran_uiux/src/features/quran/quran_madinah/q_madinah.dart';
 import 'package:on_quran_uiux/src/screen/home/home_screen.dart';
 import 'package:on_quran_uiux/src/screen/onboarding/onboarding_screen.dart';
 import 'package:on_quran_uiux/src/screen/splash/splash_screen.dart';
@@ -20,6 +21,7 @@ class RouteGenerator {
   static const String signIn = "/signin";
   static const String signUp = "/signup";
   static const String tabScreen = "/tabscreen";
+  static const String qMadinah = "/qmadinah";
 
   RouteGenerator._();
 
@@ -37,6 +39,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SignUpPage());
       case tabScreen:
         return MaterialPageRoute(builder: (_) => const TabScreen());
+      case qMadinah:
+        return MaterialPageRoute(builder: (_) => const QuranMadinah());
       default:
         throw RouteException("Route not found");
     }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:on_quran_uiux/routes/routes_screen.dart';
 
 class ModalQuran extends StatelessWidget {
   const ModalQuran({super.key});
@@ -55,7 +56,15 @@ class ModalQuran extends StatelessWidget {
                             width: 75,
                             height: 75,
                           ),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushReplacement(
+                              context,
+                              RouteGenerator.generateRoute(
+                                const RouteSettings(
+                                    name: RouteGenerator.qMadinah),
+                              ),
+                            );
+                          },
                         ),
                         const SizedBox(height: 10),
                         const Text(
@@ -437,9 +446,9 @@ class ModalQuran extends StatelessWidget {
                           Container(
                             width: 15,
                             height: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.red.shade700,
-                              borderRadius: const BorderRadius.only(
+                            decoration: const BoxDecoration(
+                              color: Colors.redAccent,
+                              borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(20),
                                 bottomRight: Radius.circular(20),
                               ),
