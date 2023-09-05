@@ -15,14 +15,6 @@ class ModalQuran extends StatelessWidget {
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
-        // gradient: LinearGradient(
-        //   colors: [
-        //     Colors.blueAccent.shade700,
-        //     Colors.purple,
-        //   ],
-        //   begin: Alignment.topCenter,
-        //   end: Alignment.bottomCenter,
-        // ),
         color: Colors.white,
       ),
       child: Column(
